@@ -228,3 +228,13 @@
 
 ?>
 ```
+
+### 9. Function
+```php
+// script_08.php
+<?php
+    function functionName( /*parameters*/ ) {
+        // code
+    }
+?>
+```
