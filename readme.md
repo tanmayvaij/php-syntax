@@ -142,7 +142,7 @@
 ```
 <br/>
 
-### Conditional Statements
+### 6. Conditional Statements
 ```php
 // script_05.php
 <?php 
@@ -155,6 +155,57 @@
     }
     else {
         // some code
+    }
+
+?>
+```
+<br/>
+
+### 7. Switch-Case
+```php
+// script_06.php
+<?php
+
+    switch ( /*variable*/) {
+
+        case /*value*/:
+            // code
+            break;
+
+        default:
+            // code
+            break;
+
+    }
+    
+?>
+```
+<br/>
+
+### 8. Loops
+```php
+// script_07.php
+<?php
+
+    // while loop
+    while ( /* condition */ ) {
+        // code
+    }
+
+    // do-while loop
+    do {
+        // code
+    }
+    while ( /* condition */ )
+
+    // for loop
+    for ( /*initialValue*/; /*condition*/ ; /*iterator*/ ) {
+        // code
+    }
+
+    // for-each loop
+    foreach( /*array*/ as /*item*/ ){
+        // code
     }
 
 ?>
