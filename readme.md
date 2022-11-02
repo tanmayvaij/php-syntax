@@ -6,6 +6,7 @@
 <?php
     echo "Hello World";
 ?>
+
 ```
 <br/>
 
@@ -22,6 +23,7 @@
         Comment
     */
 ?>
+
 ```
 <br/>
 
@@ -32,6 +34,7 @@
     $var1 = "Simple String";
     echo $var1;
 ?>
+
 ```
 <br/>
 
@@ -82,6 +85,7 @@
     echo var_dump($mynull);
 
 ?>
+
 ```
 <br/>
 
@@ -170,6 +174,7 @@
 <?php 
     ( /*condition*/ ) ? /*expression1*/ : /*expression2*/;
 ?>
+
 ```
 <br/>
 
@@ -189,6 +194,7 @@
     }
 
 ?>
+
 ```
 <br/>
 
@@ -210,6 +216,7 @@
     }
     
 ?>
+
 ```
 <br/>
 
@@ -240,6 +247,7 @@
     }
 
 ?>
+
 ```
 <br/>
 
@@ -251,6 +259,7 @@
         // code
     }
 ?>
+
 ```
 <br/>
 
@@ -275,6 +284,7 @@
     echo "a:${a} b:${b} \n"; 
 
 ?>
+
 ```
 <br/>
 
@@ -286,5 +296,117 @@
     define( "constant_name", "constant_value" );
 
 ?>
+
+```
+<br/>
+
+### 12. Classes
+```php
+// script_11.php
+<?php
+
+class Fruit {
+
+    public $name; 
+    public $color;
+
+    function set_name($name) {
+        $this->name = $name;
+    }
+
+    function get_name() {
+        return $this->name; 
+    }
+}
+
+$fruit_1 = new Fruit();
+
+$fruit_1->set_name("Mango");
+echo $fruit_1->get_name();
+
+?>
+
+```
+<br/>
+
+### 13. Constructor and Desctructor
+```php
+// script_12.php
+<?php
+
+    class Employee {
+
+        function __construct() {
+            echo "This is a constructor\n";
+        }
+
+        function __destruct() {
+            echo "This is a desctructor\n";
+        }
+
+    }
+
+    $emp = new Employee(); 
+
+?>
+
+```
+<br/>
+
+### 14. Access Modifier
+```php
+// script_13.php
+<?php
+
+class Fruit {
+    public $name;
+    protected $color;
+    private $weight;
+}
+
+$mango = new Fruit();
+$mango->name = 'Mango'; //ok
+$mango->color = 'Yellow'; // ERROR
+$mango->weight = '300'; // ERROR
+
+?>
+
+```
+<br/>
+
+### 15. Inheritance
+```php
+// script_14.php
+<?php
+
+class Somefruit {
+
+    public $name;
+    public $color;
+
+    public function __construct($name, $color) {
+        $this->name = $name;
+        $this->color = $color;
+    }
+
+    public function intro() {
+        echo"The fruit is {$this->name} and the color is {$this->color}.";
+    }
+
+}
+
+// Strawberry is inherited from Fruit
+class Strawberry extends Somefruit {
+    public function message() {
+        echo "Am I a fruit or a berry? ";
+    }
+}
+
+$strawberry = new Strawberry("Strawberry","red");
+$strawberry->message();
+$strawberry->intro();
+
+?>
+
 ```
 <br/>
