@@ -147,7 +147,20 @@
 |Operator|Description|Example|Result|
 |--------|-----------|-------|------|
 |.|Concatenation|$str1 . $str2|Concatenation of $str1 and $str2|
-|.=|Concatenation assignment|$str1 .= $str2|Appends the $str2 to the $str1|
+
+<br/>
+
+> Assignment Operators
+
+|Operator|Example|Is the same as|
+|--------|-----------|-------|
+|=|$x = $y|$x = $y|
+|+=|$x += $y|$x = $x + $y|
+|-=|$x -= $y|$x = $x - $y|
+|*=|$x *= $y|$x = $x * $y|
+|/=|$x /= $y|$x = $x / $y|
+|%=|$x %= $y|$x = $x % $y|
+|.=|$x.=$y|$x = $x . $y|
 
 <br/>
 
@@ -228,6 +241,7 @@
 
 ?>
 ```
+<br/>
 
 ### 9. Function
 ```php
@@ -238,3 +252,39 @@
     }
 ?>
 ```
+<br/>
+
+### 10. Global and Local Variable
+```php
+// script_09.php
+<?php
+
+    $a = 98;
+    $b = 9;
+
+    function printValue() {
+        global $a, $b;
+        $a = 50;
+        $b = 60;
+    }
+
+    echo "a:${a} b:${b} \n";
+
+    printValue();
+
+    echo "a:${a} b:${b} \n"; 
+
+?>
+```
+<br/>
+
+### 11. Define()
+```php
+// script_10.php
+<?php
+
+    define( "constant_name", "constant_value" );
+
+?>
+```
+<br/>
